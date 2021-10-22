@@ -1,0 +1,14 @@
+@import "./reset";
+
+@mixin row{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+
+li{
+    @include row;
+}
+ul{
+    @include row;
+}
