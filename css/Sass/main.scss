@@ -1,14 +1,69 @@
 @import "./reset";
+@import "./colors";
 
+
+/************* mixins   */
 @mixin row{
 display: flex;
 flex-direction: row;
-justify-content: space-between;
+justify-content:space-around;
+}
+
+@mixin column{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    padding: 2rem;
+    }
+
+
+
+
+/************* statics   */
+#navigation-bar{
+    background-color:$baseColor;
+    padding: 1rem;
+}
+#section-1{
+background-color:$baseColor;
+height: 90vh;
+padding-top: 5rem;
+
 }
 
 li{
     @include row;
+    padding: 5px;
 }
 ul{
     @include row;
+}
+
+h1{
+    font-weight: bold;
+    font-size: 3rem;
+    font-family: "Audiowide", sans-serif;
+    text-align: center;
+}
+#section-1-columns{
+    @include row;
+ 
+}
+.section-1-columns{
+    @include column;
+  float:initial ;
+    width:30%;
+    height:280px;
+    
+}
+
+#search-bar{
+    content: "";
+    clear: both;
+    display: table;
+}
+#section-1-img{
+    padding-top: 200px;
+    width: 400px;
+
 }
